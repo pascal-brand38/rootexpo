@@ -15,9 +15,9 @@ const { title, description } = Astro.props;
 
   <body>
     <Header />
-    <main class="w-full max-w-full m-0">
+    <main class="w-screen">
       <article>
-        <div class="prose max-w-full m-0">
+        <div class="w-screen m-0 flex flex-col justify-end align-end">
           <slot />
         </div>
       </article>

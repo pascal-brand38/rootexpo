@@ -1,5 +1,6 @@
 ---
 import Body from "../components/Body.astro";
+import Content from "../components/Content.astro";
 import Hero from "../components/Hero.astro";
 import SubTitle from "../components/SubTitle.astro";
 import Title from "../components/Title.astro";
@@ -15,12 +16,14 @@ import Layout from "../layouts/BaseLayout.astro";
     subtitle="The first IT career fair in Proper Finland. From IT students to IT students. Get along the hype and join us to build the future of IT."
     date="20.11.2025"
   />
-  <Title text="WHY? 👇" />
-  <p>3 points component here</p>
-  <Title text="WHEN, WHERE? 👀" />
-  <p>Countdown and location component</p>
-  <Title text="MAIN PARTNER" />
-  <p>Main partner intro here</p>
-  <Title text="PARTNERS" />
-  <p>Partner intro here</p>
+  <Content>
+    <Title text="WHY? 👇" />
+    <p>3 points component here</p>
+    <Title text="WHEN, WHERE? 👀" />
+    <p>Countdown and location component</p>
+    <Title text="MAIN PARTNER" />
+    <p>Main partner intro here</p>
+    <Title text="PARTNERS" />
+    <p>Partner intro here</p>
+  </Content>
 </Layout>
