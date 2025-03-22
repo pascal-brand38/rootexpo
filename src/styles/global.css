@@ -80,7 +80,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: 'JetBrains', sans-serif;
+	font-family: 'JetBrains', monospace;
 	margin: 0 0 0.5rem 0;
 	color: white;
 	line-height: 1.2;

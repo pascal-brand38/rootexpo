@@ -9,8 +9,8 @@ const { title, subtitle, date } = Astro.props;
 ---
 
 <div
-  class="w-screen h-screen bg-[url(/hero.webp)] bg-no-repeat bg-cover flex flex-col justify-center px-12"
+  class="w-screen h-screen bg-[url(/hero.webp)] bg-no-repeat bg-cover flex flex-col justify-center px-12 gap-4"
 >
-  <h1>{title}</h1>
-  <h3>{subtitle}</h3>
+  <h1 class="font-bold">{title}</h1>
+  <h5>{subtitle}</h5>
 </div>
