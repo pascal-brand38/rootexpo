@@ -11,8 +11,16 @@ const { title, subtitle, date } = Astro.props;
 <div
   class="w-screen h-screen bg-[url(/hero.webp)] bg-no-repeat bg-cover flex flex-col justify-end gap-4"
 >
-  <div class="mb-[25vh] ml-20 w-full max-w-[75vw]">
-    <h1 class="font-bold">{title}</h1>
-    <h5 class="">{subtitle}</h5>
+  <div
+    class="mb-[25vh] px-4 w-full max-w-full md:max-w-[75vw] md:px-8 lg:px-14 xl:px-20"
+  >
+    <h1
+      class="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl"
+    >
+      {title}
+    </h1>
+    <h5 class="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
+      {subtitle}
+    </h5>
   </div>
 </div>

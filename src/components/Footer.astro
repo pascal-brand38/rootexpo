@@ -1,11 +1,41 @@
 ---
+import Logo from "./Logo.astro";
 import SocialsLink from "./SocialsLink.astro";
 
 const today = new Date();
 ---
 
-<footer class="py-8 px-4 pb-24 bg-var(--container) text-center">
-  &copy; {today.getFullYear()} Root Expo. All rights reserved.
+<footer class="py-8 px-4 pb-24 bg-container text-center">
+  <div
+    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-5 my-2 md:my-4"
+  >
+    <Logo class="hidden lg:block self-center" />
+    <div class="flex flex-col">
+      <h3 class="text-accent text-lg md:text-lg lg:text-xl">
+        ROOT EXPO {today.getFullYear()}
+        <div
+          class="text-white text-xs md:text-sm lg:text-base mt-2 md:mt-4 lg:mt-6"
+        >
+          <p>Digit ry & Asteriski ry</p>
+          <p>Vesilinnantie 5</p>
+          <p>krs -1 20100 TURKU</p>
+        </div>
+      </h3>
+    </div>
+    <div class="flex flex-col">
+      <h3 class="text-accent text-lg md:text-lg lg:text-xl">
+        BILLING
+        <div
+          class="text-white text-xs md:text-sm lg:text-base mt-2 md:mt-4 lg:mt-6"
+        >
+          <p>talous[at]asteriski.fi</p>
+          <p>OKOYFIHH</p>
+          <p>Business ID: 3032318-5</p>
+        </div>
+      </h3>
+    </div>
+  </div>
+  <p>&copy; {today.getFullYear()} All rights reserved.</p>
   <div class="social-links flex justify-center gap-4 mt-4">
     <SocialsLink />
   </div>

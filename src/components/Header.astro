@@ -1,31 +1,44 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
-import { SITE_TITLE } from "../consts";
+import Logo from "./Logo.astro";
 ---
 
-<header class="m-0 py-4 px-4 fixed top-0 left-0 w-full">
-  <nav class="flex items-center justify-between">
-    <h2 class="m-0 text-base">
-      <a href="/" class="no-underline text-white hover:text-var(--accent)"
-        >{SITE_TITLE}</a
-      >
-    </h2>
+<header
+  class="m-0 py-4 px-4 fixed top-0 left-0 w-full transition-transform duration-300 bg-gradient-custom"
+>
+  <nav
+    class="flex items-center justify-center md:justify-end lg:justify-between"
+  >
+    <Logo class="hidden lg:inline-block" />
     <div class="internal-links">
-      <HeaderLink
-        href="/for-talents"
-        class="p-4 pt-2 pb-2.5 text-white no-underline hover:text-var(--accent) border-b-4 border-transparent hover:border-accent active:border-accent"
-        >FOR TALENT</HeaderLink
-      >
-      <HeaderLink
-        href="/for-employers"
-        class="p-4 pt-2 pb-2.5 text-white no-underline hover:text-var(--accent) border-b-4 border-transparent hover:border-accent active:border-accent"
-        >FOR PARTNERS</HeaderLink
-      >
-      <HeaderLink
-        href="/contact"
-        class="p-4 pt-2 pb-2.5 text-white no-underline hover:text-var(--accent) border-b-4 border-transparent hover:border-accent active:border-accent"
-        >CONTACT</HeaderLink
-      >
+      <HeaderLink href="/for-talents">FOR TALENT</HeaderLink>
+      <HeaderLink href="/for-employers">FOR PARTNERS</HeaderLink>
+      <HeaderLink href="/contact">CONTACT</HeaderLink>
     </div>
   </nav>
 </header>
+<style>
+  .bg-gradient-custom {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  }
+</style>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    let lastScrollTop = 0;
+    const header = document.querySelector("header");
+
+    window.addEventListener("scroll", () => {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (scrollTop > lastScrollTop) {
+        // Scrolling down
+        header?.classList.add("-translate-y-full");
+      } else {
+        // Scrolling up
+        header?.classList.remove("-translate-y-full");
+      }
+
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+    });
+  });
+</script>
