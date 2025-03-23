@@ -1,6 +1,7 @@
 ---
 import Body from "../components/Body.astro";
 import Content from "../components/Content.astro";
+import Pricing from "../components/Pricing.astro";
 import SubTitle from "../components/SubTitle.astro";
 import Title from "../components/Title.astro";
 import Layout from "../layouts/BaseLayout.astro";
@@ -53,10 +54,6 @@ import Layout from "../layouts/BaseLayout.astro";
 You are ready to give your best and enjoy the event to its fullest!`}
     />
     <Title text="PRICING" />
-    <div class="flex flex-row gap-10">
-      <div class="bg-gray-200 border w-1/3 h-[500px]"></div>
-      <div class="bg-gray-200 border w-1/3 h-[500px]"></div>
-      <div class="bg-gray-200 border w-1/3 h-[500px]"></div>
-    </div>
+    <Pricing />
   </Content>
 </Layout>

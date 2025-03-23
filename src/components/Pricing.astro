@@ -1,0 +1,31 @@
+---
+import PricingCard from "./PricingCard.astro";
+---
+
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-10 my-4 md:my-8 lg:my-12">
+  <PricingCard
+    name="Partner"
+    price="490 €"
+    points={[
+      "Exhibition stand",
+      "Space for roll-ups",
+      "Logo placements in our marketing",
+      "One customized social media post",
+      "Coffee & fun",
+      "Seeking a keynote or workshop? Contact us.",
+    ]}
+  />
+  <PricingCard
+    name="Main Partner"
+    price="1290 €"
+    points={[
+      "Special exhibition stand",
+      "Space for roll-ups",
+      "Logo placement on our marketing materials",
+      "Two customized social media posts",
+      "One keynote opportunity",
+      "Coffee & fun",
+      "An afterwork event hosted by you",
+    ]}
+  />
+</div>
