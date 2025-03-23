@@ -102,7 +102,7 @@ export function InfiniteScroll({
   return (
     <div
       className={cn(
-        "relative flex shrink-0 flex-col gap-4 overflow-hidden py-3",
+        "relative flex shrink-0 flex-col gap-4 overflow-hidden py-3 mb-5",
         className
       )}
       onMouseEnter={handleMouseEnter}

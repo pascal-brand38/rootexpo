@@ -1,7 +1,12 @@
 import React from "react";
 import { InfiniteScroll } from "./InfiniteScroll";
 
-const Partners: React.FC = () => {
+interface PartnersProps {
+    scrollDirection?: "normal" | "reverse";
+    partnersGroup: string;
+}
+
+const Partners: React.FC<PartnersProps> = ({scrollDirection = "normal", partnersGroup = "0"}) => {
 
     interface Partner {
         name: string;
@@ -9,7 +14,7 @@ const Partners: React.FC = () => {
         logo: string;
     }
 
-    const partnersData: { description: string; partners: Partner[] } = {
+    const partnersData0: { description: string; partners: Partner[] } = {
         description: "We are proud to be partnered with these amazing companies.",
         partners: [
             {
@@ -78,73 +83,131 @@ const Partners: React.FC = () => {
                 logo: "",
             },
             {
-                name: "PostgreSQL",
-                homepageLink: new URL("https://postgresql.org"),
-                logo: "",
+                name: "Mankeli Solutions",
+                homepageLink: new URL("https://www.mankelisolutions.fi"),
+                logo: "https://www.mankelisolutions.fi/_astro/logo_small.98b0fcb3_TNajB.webp",
             },
             {
-                name: "MySQL",
-                homepageLink: new URL("https://mysql.com"),
-                logo: "",
+                name: "Digit ry",
+                homepageLink: new URL("https://www.digit.fi"),
+                logo: "https://digit.fi/digit.svg",
             },
             {
-                name: "SQLite",
-                homepageLink: new URL("https://sqlite.org"),
-                logo: "",
-            },
-            {
-                name: "Redis",
-                homepageLink: new URL("https://redis.io"),
-                logo: "",
-            },
-            {
-                name: "Elasticsearch",
-                homepageLink: new URL("https://elastic.co"),
-                logo: "",
-            },
-            {
-                name: "Kibana",
-                homepageLink: new URL("https://elastic.co/kibana"),
-                logo: "",
-            },
-            {
-                name: "Logstash",
-                homepageLink: new URL("https://elastic.co/logstash"),
-                logo: "",
-            },
-            {
-                name: "Beats",
-                homepageLink: new URL("https://elastic.co/beats"),
-                logo: "",
-            },
-            {
-                name: "Prometheus",
-                homepageLink: new URL("https://prometheus.io"),
-                logo: "",
-            },
+                name: "Asteriski ry",
+                homepageLink: new URL("https://www.asteriski.fi"),
+                logo: "https://asteriski.fi/wp-content/uploads/2022/06/asteriski-logo_1_33.png",
+            }
         ],
     };
 
+    const partnersData1: { description: string; partners: Partner[] } = {
+        description: "We are proud to be partnered with these amazing companies.",
+        partners: [
+            {
+                name: "Bastro",
+                homepageLink: new URL("https://astro.build"),
+                logo: "https://astro.build/logo.svg",
+            },
+            {
+                name: "Bercel",
+                homepageLink: new URL("https://vercel.com"),
+                logo: "https://vercel.com/logo.svg",
+            },
+            {
+                name: "Betlify",
+                homepageLink: new URL("https://netlify.com"),
+                logo: "https://netlify.com/logo.svg",
+            },
+            {
+                name: "BitHub",
+                homepageLink: new URL("https://github.com"),
+                logo: "",
+            },
+            {
+                name: "BitLab",
+                homepageLink: new URL("https://gitlab.com"),
+                logo: "",
+            },
+            {
+                name: "Citbucket",
+                homepageLink: new URL("https://bitbucket.org"),
+                logo: "",
+            },
+            {
+                name: "Beroku",
+                homepageLink: new URL("https://heroku.com"),
+                logo: "",
+            },
+            {
+                name: "BigitalOcean",
+                homepageLink: new URL("https://digitalocean.com"),
+                logo: "",
+            },
+            {
+                name: "BWS",
+                homepageLink: new URL("https://aws.amazon.com"),
+                logo: "",
+            },
+            {
+                name: "Bzure",
+                homepageLink: new URL("https://azure.microsoft.com"),
+                logo: "",
+            },
+            {
+                name: "Boogle Cloud",
+                homepageLink: new URL("https://cloud.google.com"),
+                logo: "",
+            },
+            {
+                name: "Birebase",
+                homepageLink: new URL("https://firebase.google.com"),
+                logo: "",
+            },
+            {
+                name: "BongoDB",
+                homepageLink: new URL("https://mongodb.com"),
+                logo: "",
+            },
+            {
+                name: "Bankeli Solutions",
+                homepageLink: new URL("https://www.mankelisolutions.fi"),
+                logo: "https://www.mankelisolutions.fi/_astro/logo_small.98b0fcb3_TNajB.webp",
+            },
+            {
+                name: "Bigit ry",
+                homepageLink: new URL("https://www.digit.fi"),
+                logo: "https://digit.fi/digit.svg",
+            },
+            {
+                name: "Bsteriski ry",
+                homepageLink: new URL("https://www.asteriski.fi"),
+                logo: "https://asteriski.fi/wp-content/uploads/2022/06/asteriski-logo_1_33.png",
+            }
+        ],
+    };
+
+    const selectedPartnerData = partnersGroup === "0" ? partnersData0 : partnersData1;
+
     return (
         <InfiniteScroll
-            duration={30000}
-            direction={"normal"}
+            duration={90000}
+            direction={scrollDirection}
             showFade={false}
             className="flex flex-row justify-center"
         >
-            {partnersData.partners.flatMap((partner) => {
+            {selectedPartnerData.partners.flatMap((partner) => {
                 return (
                     <a href={partner.homepageLink.toString()} target="_blank" rel="noopener noreferrer">
                         <div
                             key={`${partner}`}
-                            className="tech-badge mr-5 flex items-center gap-3 rounded-full repo-card dark:text-neutral-400 text-neutral-500 p-3 border dark:border-neutral-700/60 border-neutral-200/80 bg-white/30 dark:bg-neutral-800/30 shadow-sm hover:shadow-md transition-all duration-300 backdrop-blur-sm"
+                            className="mr-5 flex items-center gap-3 rounded-3xl text-neutral-400 p-3 border border-neutral-700/60 bg-neutral-800/30 shadow-sm hover:shadow-md transition-all duration-300 backdrop-blur-sm"
                             data-tech-name={`${partner}`}
                         >
 
-                            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white/20 p-2 text-lg shadow-inner dark:bg-neutral-700/30">
-                                <img src={partner.logo} className="tech-icon text-xl" />
+                            <span className="flex h-32 w-32 items-center justify-center rounded-full bg-white/20 p-2 text-lg shadow-inner dark:bg-neutral-700/30">
+                                <img src={partner.logo} className="text-xl max-w-full max-h-full" />
                             </span>
-                            <span className="font-medium text-neutral-800 dark:text-white">
+                            <span className="font-medium text-3xl dark:text-white">
                                 {partner.name}
                             </span>
                         </div>
@@ -153,7 +216,6 @@ const Partners: React.FC = () => {
 
             })}
         </InfiniteScroll>
-
     );
 
 }
