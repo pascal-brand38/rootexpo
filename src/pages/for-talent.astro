@@ -6,6 +6,7 @@ import SubTitle from "../components/SubTitle.astro";
 import Title from "../components/Title.astro";
 import Layout from "../layouts/BaseLayout.astro";
 import Partners from "../components/Partners.tsx";
+import NumberCards from "../components/NumberCards.astro";
 ---
 
 <Layout
@@ -24,24 +25,34 @@ import Partners from "../components/Partners.tsx";
       Everyone’s welcome — no sign-up needed!`
     />
     <Title text="NUMBERS" />
-    <Body
-      text=``
+    <NumberCards
+      cards={[
+        {
+          number: "4000+",
+          description: "Talents reached through 7+ student communities",
+        },
+        {
+          number: "50+",
+          description: "Speed interviews",
+        },
+        {
+          number: "3",
+          description: "Universities, one event",
+        },
+        {
+          number: "5+",
+          description: "Side events",
+        },
+        {
+          number: "#1",
+          description: "IT Job Fair in Turku",
+        },
+      ]}
     />
-    <SubTitle text=`4,000+ ` />
-    <Body text=`Talent reach in our networks` />
-    <SubTitle text=`2` />
-    <Body text=`Companies already joined us` />
-    <SubTitle text=`5+` />
-    <Body text=`Side events including keynotes and workshops` />
-
-
-
     <Title text="SIDE EVENTS" />
-    <Body
-      text=`Keynotes. Workshops. Afterwork.`
-    />
+    <Body text=`Keynotes. Workshops. Afterwork.` />
   </Content>
   <Title text="PARTNERS" />
   <Partners client:load />
-  <Partners client:load scrollDirection="reverse" partnersGroup="1"/>
+  <Partners client:load scrollDirection="reverse" partnersGroup="1" />
 </Layout>
