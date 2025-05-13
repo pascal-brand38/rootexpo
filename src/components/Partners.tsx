@@ -205,7 +205,7 @@ const Partners: React.FC<PartnersProps> = ({scrollDirection = "normal", partners
                         >
 
                             <span className="flex h-24 w-24 md:h-32 md:w-32 items-center justify-center rounded-full bg-white/20 p-2 text-lg shadow-inner dark:bg-neutral-700/30">
-                                <img src={partner.logo} className="text-xl max-w-full max-h-full" />
+                                <img src={partner.logo} alt="Partner Logo" className="text-xl max-w-full max-h-full" />
                             </span>
                             <span className="font-medium text-xl md:text-3xl dark:text-white">
                                 {partner.name}

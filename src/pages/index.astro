@@ -2,16 +2,24 @@
 import Body from "../components/Body.astro";
 import Content from "../components/Content.astro";
 import Hero from "../components/Hero.astro";
-import SubTitle from "../components/SubTitle.astro";
 import Title from "../components/Title.astro";
 import Layout from "../layouts/BaseLayout.astro";
-import Partners from "../components/Partners.tsx";
 import NumberCards from "../components/NumberCards.astro";
 ---
 
 <Layout
   title="Root IT Career Fair"
-  description="Root brings together the most exciting companies and talented IT people in the Turku region. Root will be held on 20 November 2025 at the Visitor & Innovation Centre Joki in Turku, Finland."
+  description="Root brings together the most exciting companies and talented IT people in the Turku region. 20 November 2025 at the Visitor Centre Joki in Turku, Finland."
+  tags={[
+    "Root Turku",
+    "Root Expo",
+    "Career Fair",
+    "Junior IT jobs",
+    "Professional Growth",
+    "Networking",
+    "Job Dating",
+    "CV Workshop",
+  ]}
 >
   <Hero
     title="INFINITE PATHS. ONE ROOT."
@@ -23,8 +31,7 @@ import NumberCards from "../components/NumberCards.astro";
     <Body
       text=`Root brings together the most exciting companies and talented IT people in the Turku region. The event will be held on 20 November 2025 at the Visitor & Innovation Centre Joki in Turku, Finland. Join us for inspiring speakers, interactive workshops, and engaging networking. This is an adventure where everyone's welcome—no sign-up needed!`
     />
-    <Body text=``
-    />
+    <Body text=`` />
     <Title text="WHAT MAKES US DIFFERENT" />
     <NumberCards
       cards={[

@@ -2,14 +2,22 @@
 import Body from "../components/Body.astro";
 import Content from "../components/Content.astro";
 import Pricing from "../components/Pricing.astro";
-import SubTitle from "../components/SubTitle.astro";
 import Title from "../components/Title.astro";
 import Layout from "../layouts/BaseLayout.astro";
 ---
 
 <Layout
-  title="For Partners"
-  description="What value do we bring for the partners and employers?"
+  title="For Partner Organizations"
+  description="What you get as a partner organization at Root IT Career Fair."
+  tags={[
+    "Root Turku",
+    "Root Expo",
+    "Partner Employers",
+    "For Partners",
+    "IT Career Fair",
+    "IT Talent",
+    "Networking",
+  ]}
 >
   <Content>
     <Title text="1# IT CAREER FAIR IN TURKU" />
@@ -27,14 +35,9 @@ import Layout from "../layouts/BaseLayout.astro";
       text=`2. Multichannel visibility. Get your brand in the spotlight via our website and social media channels.
 `
     />
+    <Body text=`3. 100% focus on IT. Reach your specific target group.` />
     <Body
-      text=`3. 100% focus on IT. Reach your specific target group.`
-    
-    />
-    <Body
-      text=
-      `4. Not just stands. Gain even more visibility with a workshop, keynote or company presentation.`
-
+      text=`4. Not just stands. Gain even more visibility with a workshop, keynote or company presentation.`
     />
     <Title text="PRICING" />
     <Pricing />

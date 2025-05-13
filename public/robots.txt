@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rootexpo.fi/sitemap-index.xml
