@@ -3,7 +3,7 @@ import { InfiniteScroll } from "./InfiniteScroll";
 
 interface PartnersProps {
     scrollDirection?: "normal" | "reverse";
-    partnersGroup: string;
+    partnersGroup?: string;
 }
 
 const Partners: React.FC<PartnersProps> = ({scrollDirection = "normal", partnersGroup = "0"}) => {
@@ -193,7 +193,7 @@ const Partners: React.FC<PartnersProps> = ({scrollDirection = "normal", partners
             duration={90000}
             direction={scrollDirection}
             showFade={false}
-            className="flex flex-row justify-center"
+            className="flex-row justify-center"
         >
             {selectedPartnerData.partners.flatMap((partner) => {
                 return (

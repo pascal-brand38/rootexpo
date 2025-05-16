@@ -1,0 +1,23 @@
+---
+import Title from "../components/Title.astro";
+import Layout from "../layouts/BaseLayout.astro";
+import PartnersStatic from "../components/PartnersStatic.tsx";
+import PartnersScroller from "../components/PartnersScroller.tsx";
+import PartnersLogoScroller from "../components/PartnersLogoScroller.tsx";
+---
+
+
+
+<Layout
+  title="Dev Page"
+  tags={[]}
+>
+<Title text="Static Partners" />
+<PartnersStatic />
+<Title text="No BG Scroller" />
+<PartnersLogoScroller client:load />
+<PartnersLogoScroller client:load scrollDirection="reverse" partnersGroup="1" />
+<Title text="Old scroller" />
+<PartnersScroller client:load />
+<PartnersScroller client:load scrollDirection="reverse" partnersGroup="1" />
+</Layout>
