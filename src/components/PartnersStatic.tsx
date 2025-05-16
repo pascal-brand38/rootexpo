@@ -8,26 +8,29 @@ export interface Partner {
 
 const mainPartner: Partner = {
     name: "Reaktor",
-    logo: "https://cdn.cookielaw.org/logos/65274869-3579-4d42-93e2-893dae8bbcff/b74c7bd0-091c-478b-af51-4d9af81a00ae/8c44ad6d-30d8-4dc0-9838-dfcb7341587f/Reaktor_Wordmark_Black.png",
     homepageLink: new URL("https://www.reaktor.com"),
+    logo: "/partnerLogos/reaktor_white.svg",
 };
 const partners: Partner[] = [
     {
         name: "Wapice",
         homepageLink: new URL("https://wapice.com"),
-        logo: "https://images.ctfassets.net/l2p0cbhh34my/3oEDZFGiU4JkHWMOQ5lU7v/c0cfad2b676979ca92e2984dc99c3e8c/Wapice_Logo__No_Slogan_.png",
+        logo: "/partnerLogos/wapice.webp",
     },
     {
-        name: "Netum",
-        homepageLink: new URL("https://netum.fi"),
-        logo: "https://images.ctfassets.net/l2p0cbhh34my/2cNhUSLj2o60qEFTVtwicb/f480329c64a6eeb37c0425c16e80ff49/netum_logo_green.jpg",
+        name: "Visma",
+        homepageLink: new URL("https://www.visma.fi"),
+        logo: "/partnerLogos/visma_white.png",
     },
-    {
-        name: "Mankeli Solutions",
-        homepageLink: new URL("https://www.mankelisolutions.fi"),
-        logo: "https://www.mankelisolutions.fi/_astro/logo_full.a19e8d55_6cK5I.webp",
-    },
-    {
+];
+
+const ecosystem: Partner[] = [
+  {
+    name: "Turun Kaupunki",
+    homepageLink: new URL("https://www.turku.fi"),
+    logo: "https://circhubs.fi/wp-content/uploads/2020/05/turku_vaaka_300ppi_cyan.png"
+  },
+  {
         name: "Digit ry",
         homepageLink: new URL("https://www.digit.fi"),
         logo: "https://digit.fi/digit.svg",
@@ -37,14 +40,6 @@ const partners: Partner[] = [
         homepageLink: new URL("https://www.asteriski.fi"),
         logo: "https://asteriski.fi/wp-content/uploads/2022/06/asteriski-logo_1_33.png",
     }
-];
-
-const ecosystem: Partner[] = [
-  {
-    name: "Turun Kaupunki",
-    homepageLink: new URL("https://www.turku.fi"),
-    logo: "https://circhubs.fi/wp-content/uploads/2020/05/turku_vaaka_300ppi_cyan.png"
-  }
 ];
 
 
