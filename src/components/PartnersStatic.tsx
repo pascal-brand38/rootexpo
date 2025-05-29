@@ -1,4 +1,5 @@
 import React from "react";
+import SubTitle from "./SubTitle.astro";
 
 export interface Partner {
   name: string;
@@ -26,20 +27,35 @@ const partners: Partner[] = [
 
 const ecosystem: Partner[] = [
   {
-    name: "Turun Kaupunki",
+    name: "Turun kaupunki",
     homepageLink: new URL("https://www.turku.fi"),
-    logo: "https://circhubs.fi/wp-content/uploads/2020/05/turku_vaaka_300ppi_cyan.png"
+    logo: "/partnerLogos/turku.png"
   },
   {
-        name: "Digit ry",
-        homepageLink: new URL("https://www.digit.fi"),
-        logo: "https://digit.fi/digit.svg",
-    },
-    {
-        name: "Asteriski ry",
-        homepageLink: new URL("https://www.asteriski.fi"),
-        logo: "https://asteriski.fi/wp-content/uploads/2022/06/asteriski-logo_1_33.png",
-    }
+      name: "Digit ry",
+      homepageLink: new URL("https://www.digit.fi"),
+      logo: "/partnerLogos/digit.svg",
+  },
+  {
+      name: "Asteriski ry",
+      homepageLink: new URL("https://www.asteriski.fi"),
+      logo: "/partnerLogos/Asteriski.png",
+  },
+  {
+    name: "Trade ry",
+    homepageLink: new URL("https://tradery.fi"),
+    logo: "/partnerLogos/trade.svg",
+  },
+  {
+    name: "Asklepio ry",
+    homepageLink: new URL("https://asklepio.fi"),
+    logo: "/partnerLogos/asklepio.svg",
+  },
+  {
+    name: "TuKYData ry",
+    homepageLink: new URL("https://www.tuky.fi/etusivu/ainejarjestot/tukydata/"),
+    logo: "/partnerLogos/tukydata.svg",
+  },
 ];
 
 
@@ -47,9 +63,9 @@ export default function StaticPartnersPage() {
   return (
     <div className="container mx-auto px-4 py-12">
       {/* Main Partner */}
-      <h2 className="text-5xl font-bold mb-4 text-center text-accent">
+      <h5 className="text-center">
         Main Partner
-      </h2>
+      </h5>
       <section className="mb-10 flex justify-center">
         <a
           href={mainPartner.homepageLink.toString()}
@@ -68,10 +84,10 @@ export default function StaticPartnersPage() {
         </a>
       </section>
 
-      {/* Grid of Other Partners */}
-      <h2 className="text-4xl font-bold mb-4 text-center text-accent">
-        Other Partners
-      </h2>
+      {/* Grid of Partners */}
+      <h5 className="text-center">
+        Partners
+      </h5>
       <section>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-8">
           {partners.map((partner) => (
@@ -92,7 +108,7 @@ export default function StaticPartnersPage() {
           ))}
         </div>
       </section>
-      <h2 className="text-3xl font-bold mb-4 text-center text-accent">
+      <h2 className="text-center">
         Ecosystem
       </h2>
       <section>

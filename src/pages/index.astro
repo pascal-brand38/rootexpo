@@ -5,15 +5,17 @@ import Hero from "../components/Hero.astro";
 import Title from "../components/Title.astro";
 import Layout from "../layouts/BaseLayout.astro";
 import NumberCards from "../components/NumberCards.astro";
+import StaticPartnersPage from "../components/PartnersStatic";
 ---
 
 <Layout
-  title="Root IT Career Fair"
-  description="Root brings together the most exciting companies and talented IT people in the Turku region. 20 November 2025 at the Visitor Centre Joki in Turku, Finland."
+  title="Root Expo"
+  description="Root Expo aims to be the best IT career fair in Finland. Join us on Nov 20, 2025, at Visitor Center Joki in Turku to connect, explore, and grow."
   tags={[
-    "Root Turku",
     "Root Expo",
-    "Career Fair",
+    "Recruitment Fair",
+    "Software Developer",
+    "Career",
     "Junior IT jobs",
     "Professional Growth",
     "Networking",
@@ -22,17 +24,17 @@ import NumberCards from "../components/NumberCards.astro";
   ]}
 >
   <Hero
-    title="INFINITE PATHS. ONE ROOT."
-    subtitle="FUELING THE NEXT GENERATION OF IT TALENT."
-    date="COMING 20.11.2025"
+    title="FUELING THE NEXT GENERATION OF IT TALENT."
+    subtitle="Root Expo aims to be the best IT career fair in Finland. Join us on Nov 20, 2025, at Visitor Center Joki in Turku to connect, explore, and grow."
+    date=""
   />
   <Content>
     <Title text="YOU DON'T NEED TO BE PERFECT — JUST CURIOUS." />
     <Body
-      text=`Root brings together the most exciting companies and talented IT people in the Turku region. The event will be held on 20 November 2025 at the Visitor & Innovation Centre Joki in Turku, Finland. Join us for inspiring speakers, interactive workshops, and engaging networking. This is an adventure where everyone's welcome—no sign-up needed!`
+      text=`Root Expo brings together the most exciting companies and talented IT people in the Turku region. The event will be held on 20 November 2025 at the Visitor & Innovation Centre Joki in Turku, Finland. Join us for inspiring speakers, interactive workshops, and engaging networking. This is an adventure where everyone's welcome—no sign-up needed!`
     />
     <Body text=`` />
-    <Title text="WHAT MAKES US DIFFERENT" />
+    <Title text="WHAT MAKES US DIFFERENT." />
     <NumberCards
       cards={[
         {
@@ -53,6 +55,8 @@ import NumberCards from "../components/NumberCards.astro";
         },
       ]}
     />
+    <Title text="IT’S ON — JOIN US." />
+    <StaticPartnersPage />
     <!-- <Title text="SIDE EVENTS" /> 
     <Body text=`Keynotes. Workshops. Afterwork.` /> -->
   </Content>
