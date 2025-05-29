@@ -73,8 +73,8 @@ export default function StaticPartnersPage() {
           rel="noopener noreferrer"
           className="group"
         >
-          <div className="inline-flex items-center p-4 bg-transparent transition-shadow duration-300 hover:shadow-2xl">
-            <span className="flex h-36 w-72 items-center justify-center">
+          <div className="inline-flex items-center p-4 bg-transparent transition-shadow duration-300 hover:shadow-4xl">
+            <span className="flex h-24 w-48 items-center justify-center p-5">
               <img
                 src={mainPartner.logo}
                 className="max-w-full max-h-full"
@@ -96,8 +96,8 @@ export default function StaticPartnersPage() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <div className="flex flex-col items-center gap-4 p-4 bg-transparent hover:shadow-md transition-all duration-300">
-                <span className="flex h-24 w-48 items-center justify-center p-2">
+              <div className="flex flex-col items-center gap-4 p-4 bg-transparent transition-shadow duration-300 hover:shadow-4xl">
+                <span className="flex h-24 w-48 items-center justify-center">
                   <img
                     src={partner.logo}
                     className="max-w-full max-h-full"
@@ -120,7 +120,7 @@ export default function StaticPartnersPage() {
               rel="noopener noreferrer"
             >
               <div className="flex flex-col items-center gap-4 p-4 bg-transparent hover:shadow-md transition-all duration-300">
-                <span className="flex h-24 w-48 items-center justify-center p-2">
+                <span className="flex h-24 w-48 items-center justify-center">
                   <img
                     src={eco.logo}
                     className="max-w-full max-h-full"
