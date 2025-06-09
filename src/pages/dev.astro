@@ -4,19 +4,23 @@ import Layout from "../layouts/BaseLayout.astro";
 import PartnersStatic from "../components/PartnersStatic.tsx";
 import PartnersScroller from "../components/PartnersScroller.tsx";
 import PartnersLogoScroller from "../components/PartnersLogoScroller.tsx";
+import MatterportEmbed from "../components/MatterportEmbed.astro";
 ---
 
-
-
-<Layout
-  title="Dev Page"
-  tags={[]}
->
-<PartnersStatic />
-<Title text="No BG Scroller" />
-<PartnersLogoScroller client:load />
-<PartnersLogoScroller client:load scrollDirection="reverse" partnersGroup="1" />
-<Title text="Old scroller" />
-<PartnersScroller client:load />
-<PartnersScroller client:load scrollDirection="reverse" partnersGroup="1" />
+<Layout title="Dev Page" tags={[]}>
+  <MatterportEmbed
+    client:load
+    url="https://my.matterport.com/show/?m=13UZgtiVvEr"
+  />
+  <PartnersStatic />
+  <Title text="No BG Scroller" />
+  <PartnersLogoScroller client:load />
+  <PartnersLogoScroller
+    client:load
+    scrollDirection="reverse"
+    partnersGroup="1"
+  />
+  <Title text="Old scroller" />
+  <PartnersScroller client:load />
+  <PartnersScroller client:load scrollDirection="reverse" partnersGroup="1" />
 </Layout>
