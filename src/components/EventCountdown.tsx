@@ -35,19 +35,19 @@ export default function EventCountdown() {
 <div className="text-center relative">
   <div className="flex justify-center gap-2">
     <div className="flex flex-col items-center">
-      <span className="text-lg">{timeLeft.days}</span>
+      <span className="text-lg text-accent -mb-1">{timeLeft.days}</span>
       <span className="text-sm">Days</span>
     </div>
     <div className="flex flex-col items-center">
-      <span className="text-lg">{timeLeft.hours}</span>
+      <span className="text-lg text-accent -mb-1">{timeLeft.hours}</span>
       <span className="text-sm">Hours</span>
     </div>
     <div className="flex flex-col items-center">
-      <span className="text-lg">{timeLeft.minutes}</span>
+      <span className="text-lg text-accent -mb-1">{timeLeft.minutes}</span>
       <span className="text-sm">Mins</span>
     </div>
     <div className="flex flex-col items-center">
-      <span className="text-lg">{timeLeft.seconds}</span>
+      <span className="text-lg text-accent -mb-1">{timeLeft.seconds}</span>
       <span className="text-sm">Secs</span>
     </div>
   </div>

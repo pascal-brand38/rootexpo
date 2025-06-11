@@ -16,7 +16,7 @@ const partners: Partner[] = [
     {
         name: "Wapice",
         homepageLink: new URL("https://wapice.com"),
-        logo: "/partnerLogos/wapice.webp",
+        logo: "/partnerLogos/wapice-logo.webp",
     },
     {
         name: "Visma",
@@ -49,7 +49,7 @@ const ecosystem: Partner[] = [
   {
     name: "Asklepio ry",
     homepageLink: new URL("https://asklepio.fi"),
-    logo: "/partnerLogos/asklepio.svg",
+    logo: "/partnerLogos/asklepio-logo.webp",
   },
   {
     name: "TuKYData ry",
@@ -61,23 +61,23 @@ const ecosystem: Partner[] = [
 
 export default function StaticPartnersPage() {
   return (
-    <div className="container mx-auto px-4 py-12">
+    <div className="container mx-auto px-6">
       {/* Main Partner */}
-      <p className="text-center">
-        Main Partner
-      </p>
-      <section className="mb-10 justify-center">
+      <h5 className="text-center text-accent">
+        MAIN PARTNER:
+      </h5>
+      <section className="mb-10 justify-center bg-container rounded-lg py-4 px-4">
         <a
           href={mainPartner.homepageLink.toString()}
           target="_blank"
           rel="noopener noreferrer"
           className="group"
         >
-          <div className="flex flex-col items-center gap-4 p-4 bg-container rounded-lg">
-            <span className="flex h-24 w-48 items-center justify-center p-5">
+          <div className="flex flex-col items-center gap-4 p-4">
+            <span className="flex h-24 w-36 items-center justify-center">
               <img
                 src={mainPartner.logo}
-  className="max-w-full max-h-full filter brightness-0 invert"
+                className="max-w-full max-h-full filter brightness-0 invert"
               />
             </span>
           </div>
@@ -85,11 +85,11 @@ export default function StaticPartnersPage() {
       </section>
 
       {/* Grid of Partners */}
-      <p className="text-center">
-        Partners
-      </p>
+      <h5 className="text-center text-accent">
+        PARTNERS:
+      </h5>
       <section>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 mb-8 bg-container rounded-lg py-4 px-4">
           {partners.map((partner) => (
             <a
               href={partner.homepageLink.toString()}
@@ -97,11 +97,11 @@ export default function StaticPartnersPage() {
               rel="noopener noreferrer"
               className="group"
             >
-              <div className="flex flex-col items-center gap-4 p-4 bg-container rounded-lg">
-                <span className="flex h-24 w-48 items-center justify-center">
+              <div className="flex flex-col items-center gap-4 p-4">
+                <span className="flex h-24 w-36 items-center justify-center">
                   <img
                     src={partner.logo}
-  className="max-w-full max-h-full filter brightness-0 invert"
+                    className="max-w-full max-h-full filter brightness-0 invert"
 
 
                   />
@@ -111,11 +111,11 @@ export default function StaticPartnersPage() {
           ))}
         </div>
       </section>
-      <p className="text-center">
-        Ecosystem
-      </p>
+      <h5 className="text-center text-accent">
+        ECOSYSTEM:
+      </h5>
       <section>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 bg-container rounded-lg py-4 px-4">
           {ecosystem.map((eco) => (
             <a
               href={eco.homepageLink.toString()}
@@ -123,11 +123,11 @@ export default function StaticPartnersPage() {
               rel="noopener noreferrer"
               className="group"
             >
-              <div className="flex flex-col items-center gap-4 p-4 bg-container rounded-lg">
-                <span className="flex h-24 w-48 items-center justify-center">
+              <div className="flex flex-col items-center gap-4 p-4">
+                <span className="flex h-24 w-36 items-center justify-center">
                   <img
                     src={eco.logo}
-  className="max-w-full max-h-full filter brightness-0 invert"
+                    className="max-w-full max-h-full filter brightness-0 invert"
                   />
                 </span>
               </div>

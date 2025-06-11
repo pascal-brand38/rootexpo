@@ -4,11 +4,19 @@ import HeaderLink from "./HeaderLink.astro";
 import Logo from "./Logo.astro";
 ---
 
-<header class="m-0 sticky z-50 py-4 px-4 top-0 transition-transform duration-300 bg-gradient-custom">
+<header class="m-0 sticky z-50 px-4 py-4 top-0 items-center transition-transform duration-300 bg-gradient-custom">
 <nav
   class="container max-w-[1280px] mx-auto rounded-lg flex items-center"
-  style="background-color: rgba(31, 31, 31, 0.97)"
+  style="background-color: rgb(32, 32, 32)"
+  
 >
+<!--  
+      rgba(29, 29, 31, 1) dark gray
+      rgba(21, 21, 23, 1) ink black
+      rgba(217, 108, 236, 1) magenta
+ -->
+
+
     <!-- Logo: always visible -->
     <div class="inline-block flex-shrink-0">
       <Logo />
@@ -54,13 +62,6 @@ import Logo from "./Logo.astro";
   </nav>
 </header>
 
-
-
-<style>
-  .bg-gradient-custom {
-    background: linear-gradient(to bottom, rgba(20, 20, 20, 0.726), rgba(0, 0, 0, 0));
-  }
-</style>
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {

@@ -86,7 +86,13 @@ h6 {
 	line-height: 1.2;
 	margin-left: 1.5rem;
 	margin-right: 1.5rem;
+	text-transform: uppercase;
 	}
+
+h4, h5, h6 {
+	--accent: #D96CEC;
+	color: var(--accent);
+}
 
 strong,
 b {	

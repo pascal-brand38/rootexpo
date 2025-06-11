@@ -7,11 +7,11 @@ interface Props {
 const { number, description } = Astro.props;
 ---
 
-<div class="bg-container w-full h-full p-6 rounded-lg">
-    <h3 class="text-center transition-colors duration-300">
+<div class="bg-container w-full h-full p-4 rounded-lg">
+    <h4 class="text-center break-words transition-colors duration-300">
         {number}
-    </h3>
-    <p class="mt-2 transition-colors duration-300">
+    </h4>
+    <p class="text-center mt-2 break-normal transition-colors duration-300">
         {description}
     </p>
 </div>
