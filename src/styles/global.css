@@ -84,7 +84,9 @@ h6 {
 	margin: 0 0 0.5rem 0;
 	color: white;
 	line-height: 1.2;
-}
+	margin-left: 1.5rem;
+	margin-right: 1.5rem;
+	}
 
 strong,
 b {	
@@ -100,7 +102,8 @@ a:hover {
 }
 
 p {
-	margin-bottom: 1em;
+	margin-left: 1.5rem;
+	margin-right: 1.5rem;
 }
 
 .prose p {
@@ -118,7 +121,6 @@ table {
 img {
 	max-width: 100%;
 	height: auto;
-	filter: brightness(0) invert(1);
 }
 
 code {
@@ -163,4 +165,84 @@ hr {
 	clip-path: inset(50%);
 	/* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
 	white-space: nowrap;
+}
+
+/* CHATGPT ROJUT TÄSTÄ ALASPÄIN, DELETE AFTER EDIT PLS*/
+
+:root {
+  --font-body: 1rem;
+  --font-h1: 2rem;
+  --font-h2: 1.75rem;
+  --font-h3: 1.5rem;
+  --font-h4: 1.25rem;
+  --font-h5: 1.125rem;
+  --font-h6: 1rem;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --font-body: 1.125rem;
+    --font-h1: 2.5rem;
+    --font-h2: 2rem;
+    --font-h3: 1.75rem;
+    --font-h4: 1.5rem;
+    --font-h5: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --font-h1: 3rem;
+    --font-h2: 2.25rem;
+    --font-h3: 2rem;
+    --font-h4: 1.75rem;
+  }
+}
+
+body {
+  font-size: var(--font-body);
+}
+
+h1 { font-size: var(--font-h1); }
+h2 { font-size: var(--font-h2); }
+h3 { font-size: var(--font-h3); }
+h4 { font-size: var(--font-h4); }
+h5 { font-size: var(--font-h5); }
+h6 { font-size: var(--font-h6); }
+
+/* --- Global Font Weights --- */
+h1, h2 {
+  font-weight: 900;
+}
+h3, h4 {
+  font-weight: 700;
+}
+h5, h6 {
+  font-weight: 600;
+}
+p, li {
+  font-weight: 400;
+}
+strong, b {
+  font-weight: 700;
+}
+em, i {
+  font-style: italic;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+/* --- Alignment Defaults (optional) --- */
+body, p {
+  text-align: left;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-align: left;
 }

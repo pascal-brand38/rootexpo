@@ -1,0 +1,29 @@
+---
+interface Props {
+  src: string;
+  alt?: string;
+  caption?: string;
+  class?: string;
+}
+const { src, alt = '', caption = '', class: className = '' } = Astro.props;
+---
+
+---
+<!--
+    <Image src="/path/to.jpg" alt="Accessibility description" caption="This is a caption" class="my-4" />
+-->
+
+<div>
+    <figure class={"flex"}>  
+    <img
+        src={src}
+        alt={alt}
+        class="max-w-[1280px] rounded-lg object-cover"
+    />
+    {caption && (
+        <figcaption class="">
+        {caption}
+        </figcaption>
+    )}
+    </figure>
+</div>

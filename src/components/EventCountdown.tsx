@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 export default function EventCountdown() {
-  const eventDate = new Date('2025-11-20T12:00:00');
+  const eventDate = new Date('2025-11-20T11:00:00');
 
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
@@ -32,14 +32,25 @@ export default function EventCountdown() {
   }, []);
 
   return (
-    <div className="text-center relative text-xl">
-      <p>Event kicks off in:</p>
-      <div className="flex justify-center gap-4 mt-3 text-3xl">
-        <div>{timeLeft.days}d</div>
-        <div>{timeLeft.hours}h</div>
-        <div>{timeLeft.minutes}m</div>
-        <div>{timeLeft.seconds}s</div>
-      </div>
+<div className="text-center relative">
+  <div className="flex justify-center gap-2">
+    <div className="flex flex-col items-center">
+      <span className="text-lg">{timeLeft.days}</span>
+      <span className="text-sm">Days</span>
     </div>
+    <div className="flex flex-col items-center">
+      <span className="text-lg">{timeLeft.hours}</span>
+      <span className="text-sm">Hours</span>
+    </div>
+    <div className="flex flex-col items-center">
+      <span className="text-lg">{timeLeft.minutes}</span>
+      <span className="text-sm">Mins</span>
+    </div>
+    <div className="flex flex-col items-center">
+      <span className="text-lg">{timeLeft.seconds}</span>
+      <span className="text-sm">Secs</span>
+    </div>
+  </div>
+</div>
   );
 }

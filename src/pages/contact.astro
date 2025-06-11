@@ -1,10 +1,9 @@
 ---
-import Body from "../components/Body.astro";
-import Contact from "../components/Contact.astro";
 import Content from "../components/Content.astro";
-import SubTitle from "../components/SubTitle.astro";
 import Title from "../components/Title.astro";
 import Layout from "../layouts/BaseLayout.astro";
+import ContactSection from "../components/ContactSection.astro";
+import Section from "../components/Section.astro";
 ---
 
 <Layout
@@ -19,7 +18,10 @@ import Layout from "../layouts/BaseLayout.astro";
   ]}
 >
   <Content>
-    <Title text="CONTACT US." />
-    <Contact />
+    <Section>
+      <Title text="CONTACT US." />
+      <ContactSection />
+    </Section>
+
   </Content>
 </Layout>

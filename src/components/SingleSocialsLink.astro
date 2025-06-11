@@ -9,12 +9,12 @@ const { icon, name, url } = Astro.props as Props;
 ---
 
 <a href={url} target="_blank" rel="noopener noreferrer" class="block">
-  <div class="flex flex-row gap-3 cursor-pointer">
+  <div class="flex flex-row gap-3 cursor-pointer mx-4">
     <div class="">
-      <img src={`/socials/${icon}`} alt={`${name}`} class="w-8 h-8 display" />
+      <img src={`/socials/${icon}`} alt={`${name}`} class="w-10 h-10 display" />
     </div>
-    <div class="self-center">
-      <h2 class="">{name}</h2>
+    <div class="">
+      <p class="">{name}</p>
     </div>
   </div>
 </a>

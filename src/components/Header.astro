@@ -1,46 +1,88 @@
 ---
+import EventCountdown from "./EventCountdown";
 import HeaderLink from "./HeaderLink.astro";
 import Logo from "./Logo.astro";
 ---
 
-<header
-  class="m-0 py-4 px-4 sticky top-0 left-0 w-full transition-transform duration-300 bg-gradient-custom"
+<header class="m-0 sticky z-50 py-4 px-4 top-0 transition-transform duration-300 bg-gradient-custom">
+<nav
+  class="container max-w-[1280px] mx-auto rounded-lg flex items-center"
+  style="background-color: rgba(31, 31, 31, 0.97)"
 >
-  <nav
-    class="flex items-center justify-center md:justify-end lg:justify-between"
-  >
-    <div class="hidden lg:inline-block">
+    <!-- Logo: always visible -->
+    <div class="inline-block flex-shrink-0">
       <Logo />
     </div>
-    <div class="internal-links">
-      <HeaderLink href="/">FOR TALENT</HeaderLink>
+
+    <div class="flex-1 flex mt-2 mb-2 justify-center">
+      <EventCountdown client:load />
+    </div>
+
+    <!-- Desktop links: only show on large screens -->
+    <div class="hidden lg:flex gap-6 mr-4">
       <HeaderLink href="/for-partners">FOR PARTNERS</HeaderLink>
       <HeaderLink href="/contact">CONTACT</HeaderLink>
     </div>
+
+    <!-- Mobile menu icon: only show below large screens -->
+    <div class="mr-2 lg:hidden">
+      <button
+        id="mobile-menu-button"
+        aria-label="Open menu"
+        class="flex items-center justify-center w-10 h-10"
+      >
+        <svg
+          class="w-6 h-6 text-white"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+      <!-- Dropdown menu (hidden by default) -->
+      <div id="mobile-menu"
+            class="absolute right-4 mt-2 bg-black/90 rounded shadow-md p-4 flex flex-col gap-4 text-white hidden z-50"
+            style="background-color: rgba(29, 29, 31, 0.95);"
+            >
+        <a href="/for-partners" class="hover:underline">FOR PARTNERS</a>
+        <a href="/contact" class="hover:underline">CONTACT</a>
+      </div>
+    </div>
   </nav>
 </header>
+
+
+
 <style>
   .bg-gradient-custom {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    background: linear-gradient(to bottom, rgba(20, 20, 20, 0.726), rgba(0, 0, 0, 0));
   }
 </style>
+
 <script>
   document.addEventListener("DOMContentLoaded", () => {
+    // Scroll hide logic
     let lastScrollTop = 0;
     const header = document.querySelector("header");
-
     window.addEventListener("scroll", () => {
-      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       if (scrollTop > lastScrollTop) {
-        // Scrolling down
         header?.classList.add("-translate-y-full");
       } else {
-        // Scrolling up
         header?.classList.remove("-translate-y-full");
       }
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    });
 
-      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+    // Mobile menu toggle
+    const toggleBtn = document.querySelector("#mobile-menu-button");
+    const mobileMenu = document.querySelector("#mobile-menu");
+
+    toggleBtn?.addEventListener("click", () => {
+      mobileMenu?.classList.toggle("hidden");
     });
   });
 </script>

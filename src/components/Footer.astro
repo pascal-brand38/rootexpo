@@ -5,29 +5,35 @@ import SocialsLinks from "./SocialsLinks.astro";
 const today = new Date();
 ---
 
-<footer class="py-8 px-4 pb-24 bg-container text-center">
-  <div class="grid grid-cols-1 lg:grid-cols-3 gap-2 md:gap-5 my-2 md:my-4">
-    <Logo class="self-center" />
+<footer class="py-12 px-4 bg-container">
+  <div class="max-w-[1280px] mx-auto grid [grid-template-columns:repeat(auto-fit,minmax(280px,1fr))] gap-10">
+    <Logo class="" />
+
     <div class="flex flex-col">
-      <h3 class="text-accent text-lg md:text-lg lg:text-xl">
-        20.11.2025
-        <div
-          class="text-white text-xs md:text-sm lg:text-base mt-2 md:mt-4 lg:mt-6"
-        >
-          <p>Visitor & Innovation Centre Joki</p>
-          <p>Lemminkäisenkatu 12 B</p>
-          <p>20520 TURKU</p>
-        </div>
+      <h3 class="">
+        ROOT EXPO 2025
       </h3>
+
+        <div class="">
+          <p>November 20, 2025</p>
+          <p>Visitor & Innovation Center Joki</p>
+          <p>Lemminkäisenkatu 12 B</p>
+          <p>20520 Turku</p>
+        </div>
     </div>
-    <div class="flex flex-col align-center">
-      <h3 class="text-accent text-lg md:text-lg lg:text-xl">SOCIALS</h3>
-      <div class="self-center">
+
+    <div class="flex flex-col">
+      <h3 class="">
+        SOCIALS
+      </h3>
+
+      <div class="mt-4">
         <SocialsLinks />
       </div>
     </div>
   </div>
-  <p class="mt-10 md:mt-15 lg:mt-20">
+
+  <p class="text-center mt-8 text-white/10">
     &copy; {today.getFullYear()} All rights reserved.
   </p>
 </footer>

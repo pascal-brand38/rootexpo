@@ -6,7 +6,9 @@ import Title from "../components/Title.astro";
 import Layout from "../layouts/BaseLayout.astro";
 import NumberCards from "../components/NumberCards.astro";
 import StaticPartnersPage from "../components/PartnersStatic";
-import EventCountdown from "../components/EventCountdown";
+import MatterportEmbed from "../components/MatterportEmbed.astro";
+import Section from "../components/Section.astro";
+import Image from "../components/Image.astro";
 ---
 
 <Layout
@@ -28,40 +30,58 @@ import EventCountdown from "../components/EventCountdown";
 
   <Hero
     title="FUELING THE NEXT GENERATION OF IT TALENT."
-    subtitle="ROOT EXPO AIMS TO BE THE BEST IT CAREER FAIR IN FINLAND. JOIN US ON NOV 20, 2025 AT VISITOR CENTER JOKI IN TURKU TO CONNECT, EXPLORE, AND GROW."
-    date=""
+    subtitle="Root Expo aims to be the best IT career fair in Finland. Join us on Nov 20, 2025 at Visitor Center Joki in Turku to connect, explore, and grow."
   />
-  <EventCountdown client:load />
+  
   <Content>
-    <Title text="YOU DON'T NEED TO BE PERFECT — JUST CURIOUS." />
-    <Body
-      text=`Root Expo brings together the most exciting companies and talented IT people in the Turku region. The event will be held on 20 November 2025 at the Visitor & Innovation Centre Joki in Turku, Finland. Join us for inspiring speakers, interactive workshops, and engaging networking. This is an adventure where everyone's welcome—no sign-up needed!`
-    />
-    <Body text=`` />
+    <Section>
+      <Title text="YOU DON'T NEED TO BE PERFECT — JUST CURIOUS." />
+      <Body text="Root Expo brings together the most exciting companies and talented IT people in the Turku region. Join us for inspiring speakers, interactive workshops, and engaging and innovative networking. This is an adventure where everyone's welcome—no sign-up needed!" />
+<!--      <Image src="public/images/joki54.png" alt="Visitor Center Joki"></Image> -->
+    </Section>
+    
+    <Section>
+    <Title text="JOB DATING." />
+    <Body text="You'll leave with more than you came for." />
+    </Section>
+
+    <Section>
+    <Title text="MUST-SEE MOMENTS." /> 
+    <Body text="World-class speakers. Hands-on workshops. Exclusive afterwork party. Stay tuned!" />
+    </Section>
+
+    <Section>
     <Title text="WHAT MAKES US DIFFERENT." />
     <NumberCards
       cards={[
         {
           number: "4000+",
-          description: "TALENT REACH IN OUR NETWORK",
+          description: "talent reach in our network",
         },
         {
           number: "5+",
-          description: "SIDE EVENTS",
+          description: "side events",
         },
         {
           number: "#1",
-          description: "IT CAREER FAIR IN TURKU",
+          description: "IT career fair in Turku",
         },
         {
           number: "100 %",
-          description: "FOCUS ON IT",
+          description: "focus on it",
         },
       ]}
     />
-    <Title text="IT’S ON — JOIN US." />
+    </Section>
+
+    <Section>
+    <Title text="ALREADY IN MOTION." />
     <StaticPartnersPage />
-    <!-- <Title text="SIDE EVENTS" /> 
-    <Body text=`Keynotes. Workshops. Afterwork.` /> -->
+    </Section>
+
+    <Section>
+    <MatterportEmbed url="https://my.matterport.com/show/?m=13UZgtiVvEr" />
+    </Section>
   </Content>
+  
 </Layout>

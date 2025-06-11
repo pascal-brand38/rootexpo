@@ -9,14 +9,14 @@ interface Props {
 const { name, title, email, phone, text } = Astro.props;
 ---
 
-<div class="bg-container w-full max-w-[500px] h-full flex flex-col p-10 rounded-lg">
-    <h2 class="text-xl md:text-3xl lg:text-4xl">
+<div class="bg-container w-full h-full p-6 rounded-lg">
+    <h2 class="">
       {name}
     </h2>
-    <h3 class="text-lg text-accent md:text-xl lg:text-2xl">
+    <h5 class="text-accent">
       {title}
-    </h3>
-    <p class="text-base md:text-lg lg:text-xl break-words">
+    </h5>
+    <p class="break-words">
       {email}<br />
       {phone && <>{phone}<br /></>}
       {text}

@@ -4,6 +4,13 @@ import React, { useRef, useEffect, useState } from "react";
 import { motion, useAnimationControls } from "framer-motion";
 import { cn } from "../utils/cn";
 
+
+/* Notes from Marius:
+
+When hovering cursor over the scroll area, it would be cooler if it was possible to drag the scroller
+and accelerate its scrolling pace INSTEAD OF stooping the scroller movement. Toisaalta kuvakkeen klikattavuus/linkitys kärsis.
+*/
+
 interface InfiniteScrollProps {
   /** Additional CSS classes to apply to the container */
   className?: string;
