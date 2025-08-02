@@ -15,13 +15,13 @@ const { name, title, image, email, phone, linkedin, text } = Astro.props;
 ---
 
 <div
-  class="bg-container w-full h-full  rounded-lg shadow-root-card"
+  class="bg-container w-full h-full rounded-lg overflow-hidden shadow-root-card"
   style="background: linear-gradient(to top left, var(--accent) 0%, var(--container) 25%);"
 >
-  <div class="flex items-center h-full">
-    <ProfilePicture image={image} alt={`${name} profile picture`} size={360} />
+  <div class="flex items-start h-full">
+    <ProfilePicture image={image} alt={`${name} profile picture`} size={300} />
 
-    <div class="space-y-2 break-words break-all">
+    <div class="space-y-2 break-words break-all pt-10">
       <h2 class="">{name}</h2>
       <h5 class="text-accent text-2xl">
         {title}
