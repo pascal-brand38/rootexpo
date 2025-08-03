@@ -22,7 +22,7 @@ const { name, title, image, email, phone, linkedin, text } = Astro.props;
       <ProfilePicture image={image} alt={`${name} profile picture`} />
     </div>
     <div class="space-y-1 sm:space-y-2 pt-4 sm:pt-6 flex-1 px-2 sm:px-4 min-w-0">
-      <h2>{name}</h2>
+      <h2 class="text-2xl sm:text-3xl">{name}</h2>
       <h5 class="text-accent text-lg sm:text-2xl">
         {title}
       </h5>
