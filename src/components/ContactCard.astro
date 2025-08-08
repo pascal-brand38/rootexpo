@@ -21,17 +21,24 @@ const { name, title, image, email, phone, linkedin, text } = Astro.props;
     <div class="w-[40%] sm:w-[35%] h-full flex-shrink-0">
       <ProfilePicture image={image} alt={`${name} profile picture`} />
     </div>
-    <div class="space-y-1 sm:space-y-2 pt-4 sm:pt-6 flex-1 px-2 sm:px-4 min-w-0">
-      <h2 class="text-2xl sm:text-3xl">{name}</h2>
+    <div
+      class="space-y-1 sm:space-y-2 pt-4 sm:pt-6 flex-1 px-2 sm:px-4 min-w-0"
+    >
+      <h2 class="text-xl sm:text-3xl">{name}</h2>
       <h5 class="text-accent text-lg sm:text-2xl">
         {title}
       </h5>
-      
+
       {
         email && (
           <div class="flex items-center gap-2 ml-6 text-sm sm:text-base">
-            <Icon name="mdi:email" class="text-accent" width="20" height="20" />
-            <a href={`mailto:${email}`} class="text-white">
+            <Icon
+              name="mdi:email"
+              class="text-accent flex-shrink-0"
+              width="20"
+              height="20"
+            />
+            <a href={`mailto:${email}`} class="text-white truncate">
               {email}
             </a>
           </div>
@@ -41,7 +48,12 @@ const { name, title, image, email, phone, linkedin, text } = Astro.props;
       {
         phone && (
           <div class="flex items-center gap-2 ml-6 text-sm sm:text-base">
-            <Icon name="mdi:phone" class="text-accent" width="20" height="20" />
+            <Icon
+              name="mdi:phone"
+              class="text-accent flex-shrink-0"
+              width="20"
+              height="20"
+            />
             <span>{phone}</span>
           </div>
         )
@@ -52,7 +64,7 @@ const { name, title, image, email, phone, linkedin, text } = Astro.props;
           <div class="flex items-center gap-2 ml-6 text-sm sm:text-base">
             <Icon
               name="mdi:linkedin"
-              class="text-accent"
+              class="text-accent flex-shrink-0"
               width="20"
               height="20"
             />
@@ -77,5 +89,4 @@ const { name, title, image, email, phone, linkedin, text } = Astro.props;
       }
     </div>
   </div>
-
 </div>
