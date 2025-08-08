@@ -19,7 +19,11 @@ const { name, title, image, email, phone, linkedin, text } = Astro.props;
 >
   <div class="flex items-start h-full">
     <div class="w-[40%] sm:w-[35%] h-full flex-shrink-0">
-      <ProfilePicture image={image} alt={`${name} profile picture`} />
+      <ProfilePicture
+        image={image}
+        alt={`${name} profile picture`}
+        className="object-top"
+      />
     </div>
     <div
       class="space-y-1 sm:space-y-2 pt-4 sm:pt-6 flex-1 px-2 sm:px-4 min-w-0"
