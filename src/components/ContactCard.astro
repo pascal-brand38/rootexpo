@@ -14,28 +14,25 @@ interface Props {
 const { name, title, image, email, phone, linkedin, text } = Astro.props;
 ---
 
-<div
-  class="bg-container w-full h-[250px] sm:h-[280px] rounded-lg overflow-hidden shadow-root-card"
->
-  <div class="flex items-start h-full">
-    <div class="w-[40%] sm:w-[35%] h-full flex-shrink-0">
+<div class="bg-container w-full rounded-lg overflow-hidden shadow-root-card">
+  <div class="relative w-full">
+    <div class="aspect-square">
       <ProfilePicture
         image={image}
         alt={`${name} profile picture`}
-        className="object-top"
+        className="w-full h-full object-cover object-top"
       />
     </div>
-    <div
-      class="space-y-1 sm:space-y-2 pt-4 sm:pt-6 flex-1 px-2 sm:px-4 min-w-0"
-    >
-      <h2 class="text-xl sm:text-3xl">{name}</h2>
-      <h5 class="text-accent text-lg sm:text-2xl">
-        {title}
-      </h5>
+  </div>
 
+  <div class="px-4 py-6 space-y-3">
+    <h2 class="text-4xl leading-tight">{name}</h2>
+    <h5 class="text-accent text-3xl">{title}</h5>
+
+    <div class="space-y-2 pl-6 pb-4 text-sm sm:text-lg">
       {
         email && (
-          <div class="flex items-center gap-2 ml-6 text-sm sm:text-base">
+          <div class="flex items-center gap-2">
             <Icon
               name="mdi:email"
               class="text-accent flex-shrink-0"
@@ -51,21 +48,23 @@ const { name, title, image, email, phone, linkedin, text } = Astro.props;
 
       {
         phone && (
-          <div class="flex items-center gap-2 ml-6 text-sm sm:text-base">
+          <div class="flex items-center gap-2">
             <Icon
               name="mdi:phone"
               class="text-accent flex-shrink-0"
               width="20"
               height="20"
             />
-            <span>{phone}</span>
+            <a href={`tel:${phone}`} class="truncate">
+              {phone}
+            </a>
           </div>
         )
       }
 
       {
         linkedin && (
-          <div class="flex items-center gap-2 ml-6 text-sm sm:text-base">
+          <div class="flex items-center gap-2">
             <Icon
               name="mdi:linkedin"
               class="text-accent flex-shrink-0"
@@ -76,21 +75,15 @@ const { name, title, image, email, phone, linkedin, text } = Astro.props;
               href={linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              class="text-white"
+              class="text-white truncate"
             >
               {name}
             </a>
           </div>
         )
       }
-
-      {
-        text && (
-          <div class="flex items-start gap-2">
-            <p>{text}</p>
-          </div>
-        )
-      }
     </div>
+
+    {text && <p class="text-sm leading-relaxed">{text}</p>}
   </div>
 </div>
