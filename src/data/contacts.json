@@ -19,15 +19,6 @@
             "text": "Business ID: 3032318-5"
         },
         {
-            "name": "Eero Antila",
-            "title": "Recruitment",
-            "email": "eero.antila@rootexpo.fi",
-            "phone": "045 316 6986",
-            "linkedin": "https://www.linkedin.com/in/eero-antila/",
-            "image": "/images/profile/eero_antila.jpg",
-            "text": ""
-        },
-        {
             "name": "Marius Ranta",
             "title": "Event Producer",
             "email": "marius.ranta@rootexpo.fi",
@@ -45,6 +36,15 @@
             "phone": "045 652 5556",
             "linkedin": "https://www.linkedin.com/in/tom-pippuri/",
             "image": "/images/profile/tom_pippuri.jpg",
+            "text": ""
+        },
+        {
+            "name": "Eetu Salminen",
+            "title": "Head of Partnerships",
+            "email": "eetu.salminen@rootexpo.fi",
+            "phone": "040 1616 002",
+            "linkedin": "https://www.linkedin.com/in/eetusalminen22333/",
+            "image": "/images/profile/eetu_salminen.jpg",
             "text": ""
         },
         {
@@ -66,21 +66,21 @@
             "text": ""
         },
         {
-            "name": "Eetu Salminen",
-            "title": "Head of Partnerships",
-            "email": "eetu.salminen@rootexpo.fi",
-            "phone": "040 1616 002",
-            "linkedin": "https://www.linkedin.com/in/eetusalminen22333/",
-            "image": "/images/profile/eetu_salminen.jpg",
-            "text": ""
-        },
-        {
             "name": "Oskari Arvo",
             "title": "Partnership Manager",
             "email": "oskari.arvo@rootexpo.fi",
             "phone": "045 880 5996",
             "linkedin": "https://www.linkedin.com/in/oskari-arvo-a1ba0a205/",
             "image": "/images/profile/oskari_arvo.jpg",
+            "text": ""
+        },
+        {
+            "name": "Eero Antila",
+            "title": "Recruitment",
+            "email": "eero.antila@rootexpo.fi",
+            "phone": "045 316 6986",
+            "linkedin": "https://www.linkedin.com/in/eero-antila/",
+            "image": "/images/profile/eero_antila.jpg",
             "text": ""
         }
     ],
