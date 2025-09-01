@@ -7,53 +7,65 @@ export interface Partner {
 }
 
 const mainPartner: Partner = {
-    name: "Reaktor",
-    homepageLink: new URL("https://www.reaktor.com"),
-    logo: "/partnerLogos/reaktor_white.svg",
+  name: "Reaktor",
+  homepageLink: new URL("https://www.reaktor.com"),
+  logo: "/partnerLogos/reaktor_white.svg",
 };
 const partners: Partner[] = [
-    {
-        name: "Wapice",
-        homepageLink: new URL("https://wapice.com"),
-        logo: "/partnerLogos/wapice-logo.webp",
-    },
-    {
-        name: "Visma",
-        homepageLink: new URL("https://www.visma.fi"),
-        logo: "/partnerLogos/visma_white.png",
-    },
-    {
-      name: "Kongsberg",
-      homepageLink: new URL("https://www.kongsberg.com"),
-      logo: "/partnerLogos/kongsberg_white.png",
-    },
-    {
-      name: "CGI",
-      homepageLink: new URL("https://www.cgi.com/fi/fi"),
-      logo: "/partnerLogos/cgi_white.png",
-    },
-    {
-      name: "Terveystalo",
-      homepageLink: new URL("https://www.terveystalo.com"),
-      logo: "/partnerLogos/terveystalo_white.svg",
-    }
-];
+  {
+    name: "Accenture",
+    homepageLink: new URL("https://www.accenture.com"),
+    logo: "/partnerLogos/accenture.png"
+  },
 
-const ecosystem: Partner[] = [
+  {
+    name: "CGI",
+    homepageLink: new URL("https://www.cgi.com/fi/fi"),
+    logo: "/partnerLogos/cgi_white.png",
+  },
   {
     name: "Turun kaupunki",
     homepageLink: new URL("https://www.turku.fi"),
     logo: "/partnerLogos/turku.png"
   },
   {
-      name: "Digit ry",
-      homepageLink: new URL("https://www.digit.fi"),
-      logo: "/partnerLogos/digit.svg",
+    name: "Kongsberg",
+    homepageLink: new URL("https://www.kongsberg.com"),
+    logo: "/partnerLogos/kongsberg_white.png",
   },
   {
-      name: "Asteriski ry",
-      homepageLink: new URL("https://www.asteriski.fi"),
-      logo: "/partnerLogos/Asteriski.png",
+    name: "Sitowise",
+    homepageLink: new URL("https://www.sitowise.com"),
+    logo: "/partnerLogos/sitowise.png"
+  },
+  {
+    name: "Terveystalo",
+    homepageLink: new URL("https://www.terveystalo.com"),
+    logo: "/partnerLogos/terveystalo_white.svg",
+  },
+  {
+    name: "Visma",
+    homepageLink: new URL("https://www.visma.fi"),
+    logo: "/partnerLogos/visma_white.png",
+  },
+  {
+    name: "Wapice",
+    homepageLink: new URL("https://wapice.com"),
+    logo: "/partnerLogos/wapice-logo.webp",
+  }
+];
+
+const ecosystem: Partner[] = [
+
+  {
+    name: "Digit ry",
+    homepageLink: new URL("https://www.digit.fi"),
+    logo: "/partnerLogos/digit.svg",
+  },
+  {
+    name: "Asteriski ry",
+    homepageLink: new URL("https://www.asteriski.fi"),
+    logo: "/partnerLogos/Asteriski.png",
   },
   {
     name: "Trade ry",
