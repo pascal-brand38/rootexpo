@@ -52,7 +52,17 @@ const partners: Partner[] = [
     name: "Wapice",
     homepageLink: new URL("https://wapice.com"),
     logo: "/partnerLogos/wapice-logo.webp",
-  }
+  },
+  {
+    name: "Turun Yliopisto UTU",
+    homepageLink: new URL("https://www.utu.fi"),
+    logo: "/partnerLogos/UTU_logo.png",
+  },
+  {
+    name: "TEK ry",
+    homepageLink: new URL("https://www.tek.fi"),
+    logo: "/partnerLogos/TEK_logo.png",
+  },
 ];
 
 const ecosystem: Partner[] = [
@@ -96,16 +106,6 @@ const ecosystem: Partner[] = [
     name: "TIO ry",
     homepageLink: new URL("https://tio.fi"),
     logo: "/partnerLogos/TIO_logo_white.png",
-  },
-  {
-    name: "Turun Yliopisto UTU",
-    homepageLink: new URL("https://www.utu.fi"),
-    logo: "/partnerLogos/UTU_logo.png",
-  },
-  {
-    name: "TEK ry",
-    homepageLink: new URL("https://www.tek.fi"),
-    logo: "/partnerLogos/TEK_logo.png",
   },
   {
     name: "Mankeli Solutions Oy",
