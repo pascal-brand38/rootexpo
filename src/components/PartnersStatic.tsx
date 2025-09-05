@@ -82,6 +82,36 @@ const ecosystem: Partner[] = [
     homepageLink: new URL("https://www.tuky.fi/etusivu/ainejarjestot/tukydata/"),
     logo: "/partnerLogos/tukydata.svg",
   },
+  {
+    name: "Skrolli",
+    homepageLink: new URL("https://www.skrolli.fi"),
+    logo: "/partnerLogos/Skrolli.svg",
+  },
+  {
+    name: "Aamuset",
+    homepageLink: new URL("https://aamuset.fi"),
+    logo: "/partnerLogos/aamuset.png",
+  },
+  {
+    name: "TIO ry",
+    homepageLink: new URL("https://tio.fi"),
+    logo: "/partnerLogos/TIO_logo_white.png",
+  },
+  {
+    name: "Turun Yliopisto UTU",
+    homepageLink: new URL("https://www.utu.fi"),
+    logo: "/partnerLogos/UTU_logo.png",
+  },
+  {
+    name: "TEK ry",
+    homepageLink: new URL("https://www.tek.fi"),
+    logo: "/partnerLogos/TEK_logo.png",
+  },
+  {
+    name: "Mankeli Solutions Oy",
+    homepageLink: new URL("https://mankelisolutions.fi"),
+    logo: "/partnerLogos/mankeli.svg",
+  }
 ];
 
 
