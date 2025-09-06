@@ -4,18 +4,18 @@ import HeaderLink from "./HeaderLink.astro";
 import Logo from "./Logo.astro";
 ---
 
-<header class="m-0 sticky z-50 px-4 py-4 top-0 items-center transition-transform duration-300 bg-gradient-custom">
-<nav
-  class="container max-w-[1280px] mx-auto rounded-lg flex items-center"
-  style="background-color: rgb(32, 32, 32)"
-  
+<header
+  class="m-0 sticky z-50 px-4 py-4 top-0 items-center transition-transform duration-300 bg-gradient-custom"
 >
-<!--  
+  <nav
+    class="container max-w-[1280px] mx-auto rounded-lg flex items-center"
+    style="background-color: rgb(32, 32, 32)"
+  >
+    <!--  
       rgba(29, 29, 31, 1) dark gray
       rgba(21, 21, 23, 1) ink black
       rgba(217, 108, 236, 1) magenta
  -->
-
 
     <!-- Logo: always visible -->
     <div class="inline-block flex-shrink-0">
@@ -30,7 +30,7 @@ import Logo from "./Logo.astro";
     <div class="hidden lg:flex gap-6 mr-4">
       <HeaderLink href="/for-partners">For Partners</HeaderLink>
       <HeaderLink href="/contact">Contact</HeaderLink>
-      <HeaderLink href="/recruiting">Recruiting</HeaderLink>
+      <!--- <HeaderLink href="/recruiting">Recruiting</HeaderLink> -->
     </div>
 
     <!-- Mobile menu icon: only show below large screens -->
@@ -47,23 +47,26 @@ import Logo from "./Logo.astro";
           stroke-width="2"
           viewBox="0 0 24 24"
         >
-          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
       </button>
 
       <!-- Dropdown menu (hidden by default) -->
-      <div id="mobile-menu"
-            class="absolute right-4 mt-2 bg-black/90 rounded shadow-md p-4 flex flex-col gap-4 text-white hidden z-50"
-            style="background-color: rgba(29, 29, 31, 0.95);"
-            >
+      <div
+        id="mobile-menu"
+        class="absolute right-4 mt-2 bg-black/90 rounded shadow-md p-4 flex flex-col gap-4 text-white hidden z-50"
+        style="background-color: rgba(29, 29, 31, 0.95);"
+      >
         <a href="/for-partners" class="hover:underline">FOR PARTNERS</a>
         <a href="/contact" class="hover:underline">CONTACT</a>
-        <a href="/recruiting" class="hover:underline">RECRUITING</a>
+        <!--- <a href="/recruiting" class="hover:underline">RECRUITING</a> --->
       </div>
     </div>
   </nav>
 </header>
-
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
@@ -71,7 +74,8 @@ import Logo from "./Logo.astro";
     let lastScrollTop = 0;
     const header = document.querySelector("header");
     window.addEventListener("scroll", () => {
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const scrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
       if (scrollTop > lastScrollTop) {
         header?.classList.add("-translate-y-full");
       } else {
