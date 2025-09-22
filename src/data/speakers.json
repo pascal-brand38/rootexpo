@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Mikko Hyppönen",
+    "title": "Chief Research Officer",
+    "image": "/speakers/mh.jpg",
+    "company": "Sensofusion",
+    "linkedin": "https://www.linkedin.com/in/hypponen/",
+    "website": "https://mikko.com"
+  },
+  {
+    "name": "Tarmo Pajunen",
+    "title": "CTO | Co-Founder",
+    "image": "/speakers/tarmo.jpg",
+    "company": "Brillian",
+    "linkedin": "https://www.linkedin.com/in/tarmopajunen/",
+    "website": ""
+  },
+  {
+    "name": "Joonas Korgan",
+    "title": "Chief Executive Officer",
+    "image": "/speakers/joonas.jpg",
+    "company": "Identio",
+    "linkedin": "https://www.linkedin.com/in/joonaskorgan/",
+    "website": ""
+  },
+  {
+    "name": "Juha-Matti Santala",
+    "title": "Full-Stack Developer",
+    "image": "/speakers/juhis.jpg",
+    "company": "Reaktor",
+    "linkedin": "https://www.linkedin.com/in/juhamattisantala/",
+    "website": "https://hamatti.org"
+  }
+]
