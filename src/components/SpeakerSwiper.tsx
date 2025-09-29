@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SpeakerCard from "./SpeakerCard2.tsx";
 
@@ -19,8 +20,31 @@ interface SpeakerSliderProps {
 }
 
 const SpeakerSlider: React.FC<SpeakerSliderProps> = ({ speakers }) => {
+  const swiperRef = useRef<any>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (swiperRef.current?.swiper) {
+            if (entry.isIntersecting) {
+              swiperRef.current.swiper.autoplay.start();
+            } else {
+              swiperRef.current.swiper.autoplay.stop();
+            }
+          }
+        });
+      },
+      { threshold: 0.4 }
+    );
+    if (containerRef.current) observer.observe(containerRef.current);
+    return () => observer.disconnect();
+  }, []);
+
+
     return (
-        <div>
+        <div ref={containerRef}>
           <div className="hidden relative z-10 lg:flex space-x-8 top-[680px] sm:top-[690px] lg:top-[710px] xl:top-[730px] 2xl:top-[780px]">
             <button className="image-swiper-button-prev pr-1 focus:outline-none touch-manipulation absolute mr-20 w-16 h-16 text-[1.5rem] rounded-full bg-background border-2 border-white cursor-pointer transition-opacity duration-300 ease-in-out hover:border-accent hover:text-accent active:border-accent active:text-accent focus:border-white focus:text-white left-[30vw] sm:left-[36vw] md:left-[35vw] xl:left-[40vw] 2xl:left-[530px]">◀</button>
             <button className="image-swiper-button-next pl-1 focus:outline-none touch-manipulation absolute mr-20 w-16 h-16 text-[1.5rem] rounded-full bg-background border-2 border-white cursor-pointer transition-opacity duration-300 ease-in-out hover:border-accent hover:text-accent active:border-accent active:text-accent focus:border-white focus:text-white right-[30vw] sm:right-[36vw] md:right-[35vw] xl:right-[40vw] 2xl:right-[530px]">▶</button>
@@ -29,6 +53,7 @@ const SpeakerSlider: React.FC<SpeakerSliderProps> = ({ speakers }) => {
             <div className="absolute left-0 top-0 h-full w-[50px] md:w-[50px] lg:w-[300px] bg-gradient-to-r from-background to-transparent pointer-events-none z-10" />
             <div className="absolute right-0 top-0 h-full w-[50px] md:w-[50px] lg:w-[300px] bg-gradient-to-l from-background to-transparent pointer-events-none z-10" />
             <Swiper
+                ref={swiperRef}
                 slidesPerView={3}
                 spaceBetween={30}
                 speed={1000}
@@ -64,6 +89,9 @@ const SpeakerSlider: React.FC<SpeakerSliderProps> = ({ speakers }) => {
                     "--swiper-pagination-color": "#ffffffff",
                     overflow: "visible",
                 } as React.CSSProperties }
+                onSwiper={(swiper) => {
+                  swiper.autoplay.stop();
+                }}
             >
               {speakers.map((speaker) => (
                 <SwiperSlide key={speaker.name} className="flex h-full items-stretch">
