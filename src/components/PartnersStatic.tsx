@@ -67,6 +67,16 @@ const partners: Partner[] = [
     name: "Twoday",
     homepageLink: new URL("https://www.twoday.fi"),
     logo: "/partnerLogos/twoday.png",
+  },
+  {
+    name: "Purje-hanke",
+    homepageLink: new URL("https://www.ely-keskus.fi/purje-hanke"),
+    logo: "/partnerLogos/Purje_logo_white.png",
+  },
+  {
+    name: "EU",
+    homepageLink: new URL("https://europa.eu"),
+    logo: "/partnerLogos/EU_Co_Outline.png",
   }
 ];
 
