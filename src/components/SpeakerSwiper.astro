@@ -57,7 +57,13 @@ const { speakers } = Astro.props;
           320: { slidesPerView: 1 },     // mobile
           640: { slidesPerView: 2 },     // mobile sideways
           1024: { slidesPerView: 3 },   // desktop
-        }
+        },
+        astro: {
+          intersectionObserver: {
+            controlAutoplay: true,
+            options: { threshold: 0.4 }
+          },
+        },
       }}
       class="mySwiper pagination-below overflow-visible pr-[10vw] gap-8  sm:max-w-[640px] xl:max-w-[1280px] mx-auto px-6 mb-8 md:max-w-[768px] lg:max-w-[1024px] max-w-[345px] 2xl:max-w-[1536px]"
       style='swiper-pagination-color: #ffffffff; overflow: "visible"''
